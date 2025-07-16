@@ -1,4 +1,4 @@
 {
-  "KillSwitch": true,
+  "KillSwitch": false,
   "Message": "Script has been disabled by developer. Try again later."
 }
