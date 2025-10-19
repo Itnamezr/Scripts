@@ -22,6 +22,12 @@ local RunService = game:GetService("RunService")
 local VirtualUser = game:GetService("VirtualUser")
 local TweenService = game:GetService("TweenService")
 
+-- Configs.
+
+_G.KaitunConfig or _G.KaitunConfig = {
+ ["Start Farm"] = true,
+}
+
 -- TPs Function.
 
 TP = LPH_JIT_MAX(function(Target,Duration)
