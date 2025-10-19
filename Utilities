@@ -4,3 +4,27 @@ local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
 repeat wait() until LocalPlayer
+
+-- LPH.
+
+if not LPH_OBFUSCATED then
+	LPH_JIT_MAX = function(...) return ... end
+	LPH_NO_VIRTUALIZE = function(...) return ... end
+	LPH_NO_UPVALUES = function(...) return ... end
+end
+
+-- Variables.
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TeleportService = game:GetService("TeleportService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local VirtualUser = game:GetService("VirtualUser")
+local TweenService = game:GetService("TweenService")
+
+-- TPs Function.
+
+TP = LPH_JIT_MAX(function(Target,Duration)
+	local RootPart = LocalPlayer.Character.HumanoidRootPart
+	return TweenService:Create(RootPart, TweenInfo.new(Duration or 0, Enum.EasingStyle.Linear), {CFrame = Target})
+end)
